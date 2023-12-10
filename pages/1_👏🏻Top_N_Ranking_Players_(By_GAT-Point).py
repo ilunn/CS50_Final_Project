@@ -29,6 +29,7 @@ if selected_gender == "All":
     df2.insert(loc=0, column="Rank", value=range(1, num + 1))
     df2.set_index("Rank", inplace=True)
     df2.rename(columns={current_gat: "GAT Point"}, inplace=True)
+    df2.rename(columns={"Diamond": "💎?"}, inplace=True)
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 
 if selected_gender == "Male":
@@ -42,6 +43,7 @@ if selected_gender == "Male":
     df2.insert(loc=0, column="Rank", value=range(1, num + 1))
     df2.set_index("Rank", inplace=True)
     df2.rename(columns={current_gat: "GAT Point"}, inplace=True)
+    df2.rename(columns={"Diamond": "💎?"}, inplace=True)
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 if selected_gender == "Female":
     num = st.slider("Please select a range of top Gat point players", 10, 100, 30)
@@ -54,4 +56,5 @@ if selected_gender == "Female":
     df2.insert(loc=0, column="Rank", value=range(1, num + 1))
     df2.set_index("Rank", inplace=True)
     df2.rename(columns={current_gat: "GAT Point"}, inplace=True)
+    df2.rename(columns={"Diamond": "💎?"}, inplace=True)
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
