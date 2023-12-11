@@ -33,7 +33,7 @@ if selected_gender == "All":
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 
 if selected_gender == "Male":
-    num = st.slider("Please select a range of top Gat point players", 10, 100, 30)
+    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
     title = "Current Top " + str(num) + " Male Ranking"
     st.title(title)
     df2 = df[df["Gender"] == "♂️"]
@@ -46,7 +46,7 @@ if selected_gender == "Male":
     df2.rename(columns={"Diamond": "💎?"}, inplace=True)
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 if selected_gender == "Female":
-    num = st.slider("Please select a range of top Gat point players", 10, 100, 30)
+    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
     title = "Current Top " + str(num) + " Female Ranking"
     st.title(title)
     df2 = df[df["Gender"] == "♀️"]
