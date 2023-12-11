@@ -82,6 +82,6 @@ with col2:
         ddate = selected_player["Dan Date"].values[0]
         st.write("Name: ", name)
         st.write("Dan Level: ", level)
-        st.write("GatPoint: ", gp)
+        st.write("GAT Point: ", gp)
         st.write("Dan-ID: ", did)
         st.write("Dan Date: ", ddate)

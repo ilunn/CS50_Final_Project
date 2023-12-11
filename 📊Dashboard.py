@@ -12,6 +12,12 @@ def logo():
 
 logo()
 
+with st.sidebar:
+    st.markdown(
+        f'<p style="color:red;">{"GAT Point data as of 1 Dec 2023"}<p>',
+        unsafe_allow_html=True,
+    )
+
 df = pd.read_csv("./data/thai-go-all.csv")
 thisyear = len(df[df["Dan Year"] == 2023])
 beforethisyear = len(df) - thisyear

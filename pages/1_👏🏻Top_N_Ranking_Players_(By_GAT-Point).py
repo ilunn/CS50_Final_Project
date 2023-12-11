@@ -16,11 +16,11 @@ df = pd.read_csv("./data/thai-go-all.csv")
 st.sidebar.header("Options")
 
 selected_gender = st.sidebar.selectbox(
-    "Top Gat point players", ("All", "Male", "Female")
+    "Top GAT Point Players", ("All", "Male", "Female")
 )
 
 if selected_gender == "All":
-    num = st.slider("Please select a range of top Gat point players", 10, 100, 30)
+    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
     title = "Current Top " + str(num) + " Players Ranking"
     st.title(title)
     current_gat = df.columns[8]
