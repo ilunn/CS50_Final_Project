@@ -80,8 +80,14 @@ with col2:
         gp = selected_player[current_gat].values[0]
         did = selected_player["Dan-ID"].values[0]
         ddate = selected_player["Dan Date"].values[0]
+        active = selected_player["Active"].values[0]
+        if active == True:
+            active = "Yes"
+        else:
+            active = "No"
         st.write("Name: ", name)
         st.write("Dan Level: ", level)
         st.write("GAT Point: ", gp)
         st.write("Dan-ID: ", did)
         st.write("Dan Date: ", ddate)
+        st.write("Active Player?: ", active)

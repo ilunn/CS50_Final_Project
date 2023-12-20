@@ -20,11 +20,14 @@ selected_gender = st.sidebar.selectbox(
 )
 
 if selected_gender == "All":
-    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
-    title = "Current Top " + str(num) + " Players Ranking"
+    num = st.slider(
+        "Please select a range of top GAT Point active players", 10, 100, 30
+    )
+    title = "Current Top " + str(num) + " Active Players Ranking"
     st.title(title)
-    current_gat = df.columns[8]
-    df2 = df.sort_values([current_gat, "Dan-ID"], ascending=(False, True))
+    df2 = df[df["Active"] == True]
+    current_gat = df2.columns[8]
+    df2 = df2.sort_values([current_gat, "Dan-ID"], ascending=(False, True))
     df2 = df2.iloc[:num, [1, 2, 4, 5, 6, 8]]
     df2.insert(loc=0, column="Rank", value=range(1, num + 1))
     df2.set_index("Rank", inplace=True)
@@ -33,10 +36,11 @@ if selected_gender == "All":
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 
 if selected_gender == "Male":
-    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
-    title = "Current Top " + str(num) + " Male Players Ranking"
+    num = st.slider("Please select a range of top GAT Point ctive players", 10, 100, 30)
+    title = "Current Top " + str(num) + " Active Male Players Ranking"
     st.title(title)
     df2 = df[df["Gender"] == "♂️"]
+    df2 = df2[df2["Active"] == True]
     current_gat = df2.columns[8]
     df2 = df2.sort_values([current_gat, "Dan-ID"], ascending=(False, True))
     df2 = df2.iloc[:num, [1, 2, 4, 5, 6, 8]]
@@ -46,10 +50,13 @@ if selected_gender == "Male":
     df2.rename(columns={"Diamond": "💎?"}, inplace=True)
     st.table(df2.style.format(subset=["GAT Point"], formatter="{:.2f}"))
 if selected_gender == "Female":
-    num = st.slider("Please select a range of top GAT Point players", 10, 100, 30)
-    title = "Current Top " + str(num) + " Female Players Ranking"
+    num = st.slider(
+        "Please select a range of top GAT Point active players", 10, 100, 30
+    )
+    title = "Current Top " + str(num) + " Active Female Players Ranking"
     st.title(title)
     df2 = df[df["Gender"] == "♀️"]
+    df2 = df2[df2["Active"] == True]
     current_gat = df2.columns[8]
     df2 = df2.sort_values([current_gat, "Dan-ID"], ascending=(False, True))
     df2 = df2.iloc[:num, [1, 2, 4, 5, 6, 8]]
