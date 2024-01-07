@@ -42,7 +42,7 @@ col1, col2 = st.columns((2, 1), gap="Medium")
 with col1:
     if len(selected_player):
         option = st.selectbox(
-            "Select Year", ("All Years", "2566", "2565", "2564", "2563")
+            "Select Year", ("All Years", "2567", "2566", "2565", "2564", "2563")
         )
         if option == "All Years":
             option = "25"
@@ -73,7 +73,6 @@ with col2:
             st.image("./images/male.jpg")
         else:
             st.image("./images/female.jpg")
-        print(selected_player)
         name = selected_player["Name-Surname"].values[0]
         level = selected_player["Dan Level"].values[0]
         current_gat = df.columns[8]

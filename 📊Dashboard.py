@@ -14,23 +14,23 @@ logo()
 
 with st.sidebar:
     st.markdown(
-        f'<p style="color:red;">{"GAT Point data as of 16 Dec 2023"}<p>',
+        f'<p style="color:red;">{"GAT Point data as of 1 JAN 2024"}<p>',
         unsafe_allow_html=True,
     )
 
 df = pd.read_csv("./data/thai-go-all.csv")
-thisyear = len(df[df["Dan Year"] == 2023])
+thisyear = len(df[df["Dan Year"] == 2024])
 beforethisyear = len(df) - thisyear
 alldangrowth = thisyear / beforethisyear * 100
 alldangrowth = f"{alldangrowth:.2f}%"
 
-dfmale = df.loc[(df["Dan Year"] == 2023) & (df["Gender"] == "♂️")]
+dfmale = df.loc[(df["Dan Year"] == 2024) & (df["Gender"] == "♂️")]
 malethisyear = len(dfmale)
 malebeforethisyear = len(df[df["Gender"] == "♂️"]) - malethisyear
 maledangrowth = malethisyear / malebeforethisyear * 100
 maledangrowth = f"{maledangrowth:.2f}%"
 
-dffemale = df.loc[(df["Dan Year"] == 2023) & (df["Gender"] == "♀️")]
+dffemale = df.loc[(df["Dan Year"] == 2024) & (df["Gender"] == "♀️")]
 femalethisyear = len(dffemale)
 femalebeforethisyear = len(df[df["Gender"] == "♀️"]) - femalethisyear
 femaledangrowth = femalethisyear / femalebeforethisyear * 100
@@ -110,7 +110,7 @@ with c4:
     # )
     # st.plotly_chart(fig, use_container_width=True)
 
-    years = range(1993, 2024)
+    years = range(1993, 2025)
     male = []
     female = []
     total = []
