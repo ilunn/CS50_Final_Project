@@ -23,20 +23,20 @@ st.write(
 )
 
 
-st.markdown(
-    "<b><h2 style='text-align: center; color: LightCoral;'>About Me</h2><b>",
-    unsafe_allow_html=True,
-)
+# st.markdown(
+#    "<b><h2 style='text-align: center; color: LightCoral;'>About Me</h2><b>",
+#   unsafe_allow_html=True,
+# )
 
-col1, col2 = st.columns((1, 1.5), gap="Medium")
+# col1, col2 = st.columns((1, 1.5), gap="Medium")
 
-with col1:
-    st.image("./images/me.jpg")
+# with col1:
+#   st.image("./images/me.jpg")
 
-with col2:
-    st.write(
-        "I've been playing Go since I was a little young girl. Go has helped me develop many life skills, such as calculation, memory, and creativity. From there, I developed this web application to visualize GAT Point of Go players in Thailand. GAT Point web will let Go players know their status, progress, and ranking in Thailand. Last, I hope this web application will inspire Go players to continuously improve their Go capabilities and benefit the Thailand Go community.🖤🤍"
-    )
+# with col2:
+#    st.write(
+#        "I've been playing Go since I was a little young girl. Go has helped me develop many life skills, such as calculation, memory, and creativity. From there, I developed this web application to visualize GAT Point of Go players in Thailand. GAT Point web will let Go players know their status, progress, and ranking in Thailand. Last, I hope this web application will inspire Go players to continuously improve their Go capabilities and benefit the Thailand Go community.🖤🤍"
+#    )
 
 st.markdown(
     "###### [GAT-Point Data](https://drive.google.com/file/d/14SMzCtmljfmfT2OpVxmrN0XrBb1P4hCU/view)",

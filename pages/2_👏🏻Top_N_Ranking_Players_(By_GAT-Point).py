@@ -11,7 +11,7 @@ def logo():
 
 logo()
 
-df = pd.read_csv("./data/thai-go-all.csv")
+df = pd.read_csv("./data/thai-go-all-honorable.csv")
 
 st.sidebar.header("Options")
 
